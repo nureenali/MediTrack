@@ -6,3 +6,5 @@ prophet
 joblib
 jupyter
 ipykernel
+fastapi
+uvicorn

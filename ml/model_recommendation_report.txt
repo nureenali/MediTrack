@@ -1,0 +1,46 @@
+
+====================================================================================================
+MODEL SELECTION REPORT - BEST MODEL PER CATEGORY
+====================================================================================================
+
+Category    Recommended_Model        MAE  Prophet_MAE  Improvement_%
+    N05B             Ensemble  31.379954    61.461044      48.943344
+   N02BA                ARIMA  11.874629    20.097882      40.916019
+   M01AB ExponentialSmoothing  17.700922    23.633371      25.101998
+    N05C                ARIMA   5.883067     7.437719      20.902264
+   M01AE              Prophet  17.825719    17.825719       0.000000
+     R06              Prophet  23.705900    23.705900       0.000000
+     R03              Prophet  74.960610    74.960610       0.000000
+   N02BE              Prophet 175.409733   175.409733       0.000000
+
+====================================================================================================
+KEY INSIGHTS
+====================================================================================================
+  Prophet                  : 4 categories (best choice)
+  ARIMA                    : 2 categories (best choice)
+  Ensemble                 : 1 categories (best choice)
+  ExponentialSmoothing     : 1 categories (best choice)
+
+Overall: +17.0% improvement over Prophet
+         (4 categories better, 4 worse)
+
+====================================================================================================
+DEPLOYMENT STRATEGY
+====================================================================================================
+
+[OPTION 1] Switch to Best Model Per Category (Mixed Strategy)
+  - Use recommendation table above
+  - Pros: Max accuracy per category
+  - Cons: Requires managing multiple model types
+
+[OPTION 2] Switch All to ARIMA
+  - ARIMA is best for 6/8 categories
+  - Simpler deployment (one model type)
+  - Still competitive on other categories
+
+[OPTION 3] Hybrid: Use Ensemble for Uncertain Categories
+  - Keep Prophet as default
+  - Use Ensemble/ARIMA for high-variance categories (N02BE, R06, R03)
+  - Balance accuracy and simplicity
+
+====================================================================================================

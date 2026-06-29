@@ -1,0 +1,10 @@
+{
+  "N05B": "Ensemble",
+  "N02BA": "ARIMA",
+  "M01AB": "ExponentialSmoothing",
+  "N05C": "ARIMA",
+  "M01AE": "Prophet",
+  "R06": "Prophet",
+  "R03": "Prophet",
+  "N02BE": "Prophet"
+}
